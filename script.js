@@ -5,7 +5,7 @@ gsap.registerPlugin();
 document.addEventListener('DOMContentLoaded', () => {
     // Initial animation for the gradient overlay
     gsap.from('.gradient-overlay', {
-        opacity: 0,
+        opacity: 15,
         duration: 2,
         ease: 'power2.out'
     });
