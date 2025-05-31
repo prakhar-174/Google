@@ -1,5 +1,5 @@
 // Initialize GSAP
-gsap.registerPlugin();
+gsap.registerPlugin(ScrollTrigger);
 
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,6 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Club Story Section Animations
+    const storyTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.club-story',
+            start: 'top 70%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    storyTimeline
+        .from('.section-title', {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        })
+        .from('.story-description', {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        }, '-=0.5')
 
     // Hamburger Menu Toggle
     const hamburger = document.querySelector('.hamburger-menu');
@@ -124,4 +148,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Remove the previous interval and transition styles
     cyclingText.style.transition = 'none';
+
+    // Stat Box Counting Animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    // Function to animate counting
+    function animateValue(element, start, end, duration, addPlus = false) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.textContent = currentValue;
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else if (addPlus) {
+                // Add the plus symbol after counting completes
+                element.textContent = currentValue + '+';
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Create an Intersection Observer for the stats section
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate each stat number
+                statNumbers.forEach((stat, index) => {
+                    const endValue = parseInt(stat.textContent);
+                    const startValue = 0;
+                    // Add plus symbol only for 2nd and 3rd stat boxes (index 1 and 2)
+                    const addPlus = index === 1 || index === 2;
+                    animateValue(stat, startValue, endValue, 2000, addPlus); // 2 seconds duration
+                });
+                // Unobserve after animation starts
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the element is visible
+    });
+
+    // Observe the stats container
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+        statsObserver.observe(statsContainer);
+    }
 }); 
