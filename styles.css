@@ -1259,4 +1259,211 @@ body {
     .pillar p {
         font-size: 1rem;
     }
+}
+
+/* Team Section Styles */
+.team-section {
+    position: relative;
+    width: 100%;
+    padding: 8rem 4rem;
+    z-index: 1;
+    background: transparent;
+}
+
+.team-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.team-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.team-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.4s ease;
+}
+
+.team-card:hover .card-image {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.team-card:hover .card-image img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.social-links {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.team-card:hover .social-links {
+    bottom: 0;
+    opacity: 1;
+}
+
+.social-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #4285F4;
+    transform: translateY(-3px);
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.card-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    color: #4285F4;
+    margin-bottom: 0.5rem;
+}
+
+.card-bio {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+/* Responsive Styles for Team Section */
+@media screen and (max-width: 1200px) {
+    .team-section {
+        padding: 6rem 3rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .team-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-section {
+        padding: 4rem 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 3rem auto 0;
+    }
+    
+    .team-title {
+        font-size: 2.5rem;
+    }
+    
+    .team-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .team-description {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .team-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .team-title {
+        font-size: 2rem;
+    }
+    
+    .card-image {
+        width: 150px;
+        height: 150px;
+    }
 } 

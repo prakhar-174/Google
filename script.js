@@ -232,4 +232,63 @@ document.addEventListener('DOMContentLoaded', () => {
         //     stagger: 0.2,
         //     ease: 'power3.out'
         // }, '-=0.5')
+
+    // Team Section Animations
+    const teamTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.team-section',
+            start: 'top 70%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    teamTimeline
+        .from('.team-title', {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        })
+        .from('.team-subtitle', {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        }, '-=0.5')
+        .from('.team-description', {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        }, '-=0.5');
+        // .from('.team-card', {
+        //     y: 50,
+        //     opacity: 0,
+        //     duration: 0.8,
+        //     stagger: 0.2,
+        //     ease: 'power3.out'
+        // }, '-=0.3');
+
+    // Add hover animation for team cards
+    const teamCards = document.querySelectorAll('.team-card');
+    teamCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            gsap.to(card, {
+                y: -10,
+                scale: 1.05,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, {
+                y: 0,
+                scale: 1,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+    });
 }); 
