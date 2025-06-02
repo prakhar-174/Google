@@ -195,4 +195,41 @@ document.addEventListener('DOMContentLoaded', () => {
     if (statsContainer) {
         statsObserver.observe(statsContainer);
     }
+
+    // Join Community Section Animations
+    const communityTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.join-community',
+            start: 'top 70%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    communityTimeline
+        .from('.community-title', {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        })
+        .from('.community-subtitle', {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        }, '-=0.5')
+        .from('.community-cta', {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power3.out'
+        }, '-=0.3');
+        // .from('.pillar', {
+        //     y: 30,
+        //     opacity: 0,
+        //     duration: 0.8,
+        //     stagger: 0.2,
+        //     ease: 'power3.out'
+        // }, '-=0.5')
 }); 

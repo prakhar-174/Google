@@ -929,4 +929,334 @@ body {
         width: 100%;
         gap: 0.8rem;
     }
+}
+
+/* Join Community Section Styles */
+.join-community {
+    position: relative;
+    width: 100%;
+    padding: 8rem 4rem;
+    z-index: 1;
+    background: transparent;
+}
+
+.community-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.community-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.community-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.value-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pillar {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.pillar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(66, 133, 244, 0.1),
+        rgba(234, 67, 53, 0.1),
+        rgba(251, 188, 5, 0.1),
+        rgba(52, 168, 83, 0.1)
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.pillar::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(
+        45deg,
+        #4285F4,
+        #EA4335,
+        #FBBC05,
+        #34A853
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    border-radius: 24px;
+}
+
+.pillar:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(66, 133, 244, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pillar:hover::before {
+    opacity: 1;
+    animation: gradientShift 3s ease infinite;
+}
+
+.pillar:hover::after {
+    opacity: 0.1;
+    animation: borderGlow 2s ease infinite;
+}
+
+.pillar:hover .pillar-icon {
+    transform: scale(1.2) rotate(10deg);
+    animation: iconFloat 2s ease infinite;
+}
+
+.pillar:hover h3 {
+    transform: translateY(-5px);
+    background: linear-gradient(45deg, #4285F4, #34A853);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlow 2s ease infinite;
+}
+
+.pillar-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.pillar h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.pillar p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.pillar:hover p {
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes borderGlow {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes iconFloat {
+    0% {
+        transform: scale(1.2) rotate(10deg) translateY(0);
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg) translateY(-5px);
+    }
+    100% {
+        transform: scale(1.2) rotate(10deg) translateY(0);
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.2);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.community-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: #4285F4;
+    color: #ffffff;
+    border: none;
+}
+
+.cta-button.primary:hover {
+    background: #3367d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(66, 133, 244, 0.3);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles for Join Community Section */
+@media screen and (max-width: 1200px) {
+    .join-community {
+        padding: 6rem 3rem;
+    }
+    
+    .community-title {
+        font-size: 3.5rem;
+    }
+    
+    .community-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .join-community {
+        padding: 5rem 2.5rem;
+    }
+    
+    .value-pillars {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .community-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .join-community {
+        padding: 4rem 2rem;
+    }
+    
+    .value-pillars {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .community-title {
+        font-size: 2.5rem;
+    }
+    
+    .community-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .community-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .join-community {
+        padding: 3rem 1.5rem;
+    }
+    
+    .community-title {
+        font-size: 2rem;
+    }
+    
+    .community-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .pillar {
+        padding: 2rem 1.5rem;
+    }
+    
+    .pillar h3 {
+        font-size: 1.5rem;
+    }
+    
+    .pillar p {
+        font-size: 1rem;
+    }
 } 
