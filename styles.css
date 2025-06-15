@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -1656,7 +1657,7 @@ body {
     
     .footer-section.about {
         grid-column: 1 / -1;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-logo {
@@ -1679,15 +1680,15 @@ body {
     }
     
     .footer-section {
-        text-align: center;
+        text-align: left;
     }
     
     .footer-links {
-        align-items: center;
+        align-items: left;
     }
     
     .footer .social-links {
-        align-items: center;
+        align-items: left;
     }
 }
 
@@ -1705,5 +1706,89 @@ body {
     .footer-links a,
     .footer .social-link {
         font-size: 0.9rem;
+    }
+}
+
+/* Events Section Styles */
+.events-section {
+    position: relative;
+    width: 100%;
+    padding: 8rem 4rem;
+    z-index: 1;
+    background: transparent;
+}
+
+.events-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.events-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.events-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4rem;
+}
+
+/* Responsive Styles for Events Section */
+@media screen and (max-width: 1200px) {
+    .events-section {
+        padding: 6rem 3rem;
+    }
+    
+    .events-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .events-section {
+        padding: 5rem 2.5rem;
+    }
+    
+    .events-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .events-section {
+        padding: 4rem 2rem;
+    }
+    
+    .events-title {
+        font-size: 2.5rem;
+    }
+    
+    .events-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .events-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .events-title {
+        font-size: 2rem;
+    }
+    
+    .events-subtitle {
+        font-size: 1.1rem;
     }
 } 
