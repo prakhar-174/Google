@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&family=Clash+Display:wght@600;700&family=Bai+Jamjuree:wght@600;700&family=Be+Vietnam+Pro:wght@700;800&family=Intro+Rust:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="events.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,12 +58,148 @@
     <!-- Events Section -->
     <section class="events-section">
         <div class="events-content">
-            <h2 class="events-title">Our <span style="color: #4285F4;">Events</span></h2>
-            <p class="events-subtitle">Join us for exciting tech events, workshops, and hackathons</p>
+            <h2 class="events-title">Event <span style="color: #4285F4;">Gallery</span></h2>
+            <p class="events-subtitle">Here you'll find snapshots and highlights from our most unforgettable 
+                gatherings, workshops, and celebrations. Each photo and recap captures the energy, creativity, 
+                and friendship that make every event special</p>
             
-            <!-- Events content will be added here -->
-            
+            <!-- Banner Section -->
+            <div class="events-banner">
+                <img src="Assets/HH02.jpg" alt="GDG ABESEC Events">
+            </div>
+
+            <!-- Image Slider Section -->
+            <div class="events-slider">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slider-item">
+                            <img src="Assets/Workshop.jpg" alt="Event Image 1">
+                        </div>
+                        <div class="slider-item">
+                            <img src="Assets/Hackthon.jpg" alt="Event Image 2">
+                        </div>
+                        <div class="slider-item">
+                            <img src="Assets/3 (1).png" alt="Event Image 3">
+                        </div>
+                        <div class="slider-item">
+                            <img src="Assets/3 (2).png" alt="Event Image 4">
+                        </div>
+                        <div class="slider-item">
+                            <img src="Assets/3 (3).png" alt="Event Image 5">
+                        </div>
+                        <div class="slider-item">
+                            <img src="Assets/3 (4).png" alt="Event Image 6">
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-nav prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-nav next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="past-events">
+        <div class="past-events-header">
+            <h2 class="past-events-title">Past <span style="color: #FBBC05;">Events</span></h2>
+            <p class="past-events-subtitle">A Walk Down Memory Lane</p>
+        </div>
+        
+        <div class="events-grid">
+            <!-- Event Card 1 -->
+            <div class="event-card">
+                <img src="Assets/Event1.png" alt="Event 1" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">May 3-4, 2025</span>
+                    <h3 class="event-title">HackHaven 2.0</h3>
+                    <p class="event-description">A high-energy event where creative minds collaborated to solve challenges in just 24 hours.</p>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="event-card">
+                <img src="Assets/Event2.png" alt="Event 2" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">March 06, 2025</span>
+                    <h3 class="event-title">Solution Challenge</h3>
+                    <p class="event-description">Solution Challenge 2025!Google Hackathon, where developers create impactful solutions and make a difference with the support of industry experts using google technology
+                    </p>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="event-card">
+                <img src="Assets/Event3.png" alt="Event 3" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">December 26, 2024</span>
+                    <h3 class="event-title">Tech Winter Break</h3>
+                    <p class="event-description">Hands-on workshop to learn and dive into journey of web development.</p>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="event-card">
+                <img src="Assets/Event4.png" alt="Event 4" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">July 3-5, 2024</span>
+                    <h3 class="event-title">Branch & Beyond</h3>
+                    <p class="event-description">Uncover 𝙂𝙞𝙩 𝙚𝙨𝙨𝙚𝙣𝙩𝙞𝙖𝙡𝙨 & delve into 𝙎𝙤𝙡𝙖𝙣𝙖 development.</p>
+                </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="event-card">
+                <img src="Assets/Event5.png" alt="Event 5" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">December 05, 2023</span>
+                    <h3 class="event-title">Innovare</h3>
+                    <p class="event-description">Learn about AR/VR, gaming development, app/web intricacies, and product wizardry.</p>
+                </div>
+            </div>
+
+            <!-- Hidden Event Cards -->
+            <div class="event-card hidden">
+                <img src="Assets/Event6.png" alt="Event 6" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">July 08, 2023</span>
+                    <h3 class="event-title">HackHaven 1.0 </h3>
+                    <p class="event-description">HackHaven an epic adventure of coding and innovation.</p>
+                </div>
+            </div>
+
+            <div class="event-card hidden">
+                <img src="Assets/Event7.png" alt="Event 7" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">February 08, 2023</span>
+                    <h3 class="event-title">Informatory Session</h3>
+                    <p class="event-description">An event that will provide you a chance to delve further into web development (Journey Guide).</p>
+                </div>
+            </div>
+
+            <div class="event-card hidden">
+                <img src="Assets/Event8.png" alt="Event 8" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">January 25, 2023</span>
+                    <h3 class="event-title">Informatory Session</h3>
+                    <p class="event-description">All about solution challenge.</p>
+                </div>
+            </div>
+
+            <div class="event-card hidden">
+                <img src="Assets/Event9.png" alt="Event 9" class="event-image">
+                <div class="event-overlay">
+                    <span class="event-date">October 08, 2021</span>
+                    <h3 class="event-title">Google Clud Workshop</h3>
+                    <p class="event-description">Special Hands-on training was given on the tracks ie. Cloud Engineering and Data Science & Machine Learning track.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="show-more-btn">Show More</button>
     </section>
 
     <footer class="footer">
@@ -107,5 +244,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="events.js"></script>
 </body>
 </html> 
