@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - GDG-ABESEC</title>
+    <link rel="shortcut icon" href="Assets/nav-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&family=Clash+Display:wght@600;700&family=Bai+Jamjuree:wght@600;700&family=Be+Vietnam+Pro:wght@700;800&family=Intro+Rust:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="teams.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="Assets/Navbar-logo.png" alt="Logo" class="logo">
+            <span class="company-name">
+                <span class="g-blue">G</span>
+                <span class="o-red">o</span>
+                <span class="o-yellow">o</span>
+                <span class="g-green">g</span>
+                <span class="l-blue">l</span>
+                <span class="e-red">e</span>
+                <span class="developers"> Developers</span>
+            </span>
+        </div>
+        <div class="nav-container">
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full Screen Navigation Menu -->
+    <div class="nav-overlay">
+        <div class="nav-content">
+            <ul class="nav-items">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="teams.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="background">
+            <div class="gradient-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-content">
+            <h2 class="team-title">Meet Our <span style="color: #FBBC05;">Amazing Team</span></h2>
+            <p class="team-subtitle">The brilliant minds driving innovation at GDG ABESEC</p>
+        </div>
+        <!-- Organizer Spotlight Card -->
+        <div class="organizer-card">
+            <div class="organizer-image">
+                <img src="Assets/Org.JPG" alt="Aviral Mittal">
+            </div>
+            <div class="organizer-details">
+                <h3 class="organizer-name">Aviral Mittal</h3>
+                <p class="organizer-role">Organizer</p>
+                <blockquote class="organizer-vision">“Leading the Google Developers Group at ABES EC, I'm passionate about fostering a community of tech enthusiasts and innovators. With experience in full-stack development and cloud technologies, I organize workshops, hackathons, and tech talks to share knowledge and inspire future developers.”</blockquote>
+                <div class="organizer-skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Community Building</span>
+                    <span class="skill-tag">Competitive Programming</span>
+                    <span class="skill-tag">Node.js</span>
+                </div>
+                <div class="organizer-social">
+                    <a href="https://www.linkedin.com/in/aviral-mittal-a95390281" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <!-- <a href="#" class="social-link" title="Twitter"><i class="fab fa-x-twitter"></i></a> -->
+                    <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://Github.com/aviralmittal8" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- End Organizer Spotlight Card -->
+
+        <!-- Core Leadership Section -->
+        <div class="core-leadership-section">
+            <h3 class="core-leadership-title">The Core Leadership</h3>
+            <div class="core-leadership-grid">
+                <!-- Member Card 1 -->
+                <div class="core-member-card">
+                    <div class="core-member-image">
+                        <img src="Assets/AC1.jpg" alt="Member 1">
+                    </div>
+                    <div class="core-member-details">
+                        <h4 class="core-member-name">Shubhangi Chandra</h4>
+                        <p class="core-member-role">Acting General</p>
+                        <p class="core-member-desc">Creative, driven, always learning.</p>
+                        <a href="#" class="core-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Member Card 2 -->
+                <div class="core-member-card">
+                    <div class="core-member-image">
+                        <img src="Assets/AC2.jpg" alt="Member 2">
+                    </div>
+                    <div class="core-member-details">
+                        <h4 class="core-member-name">Mudassir Imam</h4>
+                        <p class="core-member-role">Acting General</p>
+                        <p class="core-member-desc">Tech enthusiast, team player.</p>
+                        <a href="#" class="core-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Member Card 3 -->
+                <div class="core-member-card">
+                    <div class="core-member-image">
+                        <img src="Assets/AC3.jpeg" alt="Member 3">
+                    </div>
+                    <div class="core-member-details">
+                        <h4 class="core-member-name">Parvani Sood</h4>
+                        <p class="core-member-role">Acting General</p>
+                        <p class="core-member-desc">Organized, passionate, coder.</p>
+                        <a href="#" class="core-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Member Card 4 -->
+                <div class="core-member-card">
+                    <div class="core-member-image">
+                        <img src="#" alt="Member 4">
+                    </div>
+                    <div class="core-member-details">
+                        <h4 class="core-member-name"> Devansh Dwivedi</h4>
+                        <p class="core-member-role">Acting General</p>
+                        <p class="core-member-desc">Builder, innovator, motivator.</p>
+                        <a href="#" class="core-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Core Leadership Section -->
+
+        <!-- Departmental Lead Section -->
+        <div class="departmental-lead-section">
+            <h3 class="departmental-lead-title">Departmental Lead</h3>
+            <div class="dept-slider">
+                <button class="dept-slider-btn prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <div class="dept-slider-container">
+                    <div class="dept-slider-track">
+                        <!-- Member Card 1 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/Mihir.png" alt="Member 1">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Mihir Sahu</h4>
+                                <p class="dept-member-role">Elixir Head</p>
+                                <p class="dept-member-desc">Community Engagement & Growth</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 2 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/IMG_20230201_153849 - Apoorva Kesarwani.jpg" alt="Member 2">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name"> Apoorva Kesarwani</h4>
+                                <p class="dept-member-role">Technical Captain</p>
+                                <p class="dept-member-desc">Code & Development Excellence</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 3 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 3">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Priyanshi Aggarwal</h4>
+                                <p class="dept-member-role">Technical Captain</p>
+                                <p class="dept-member-desc">Technical Innovation Leader</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 4 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/saniapicture - Sania Khan(3).jpg" alt="Member 4">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name"> Sania Khan</h4>
+                                <p class="dept-member-role">Events Captain</p>
+                                <p class="dept-member-desc">Event Planning & Execution</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 5 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 5">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Harsh Shorey</h4>
+                                <p class="dept-member-role">Events Captain</p>
+                                <p class="dept-member-desc">Community Experience Creators</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 6 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/Disha Shukla.jpg" alt="Member 6">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Disha Shukla</h4>
+                                <p class="dept-member-role">Visuals Captain</p>
+                                <p class="dept-member-desc">Visual Content & Graphics</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 7 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/IMG20241015171736 - Riddhi Saraf.jpg" alt="Member 7">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Riddhi Saraf</h4>
+                                <p class="dept-member-role">Visuals Captain</p>
+                                <p class="dept-member-desc">Creative Visual Storytellers</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 8 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/IMG_2785 - Suryansh Ranjan(1).jpg" alt="Member 8">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Suryansh Ranjan</h4>
+                                <p class="dept-member-role">Sponsorship Captain</p>
+                                <p class="dept-member-desc">Partnership & Business Development</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 9 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="Team Photos/PROFILE - Piyush Agarwal.png" alt="Member 9">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Piyush Agarwal</h4>
+                                <p class="dept-member-role">Design Captain</p>
+                                <p class="dept-member-desc">Digital Design Specialists</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 10 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 10">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Parth Bhardwaj</h4>
+                                <p class="dept-member-role">Design Captain</p>
+                                <p class="dept-member-desc">UI/UX & Product Design</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 11 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 11">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Akhya Rastogi</h4>
+                                <p class="dept-member-role">Media Captain</p>
+                                <p class="dept-member-desc">Social Media & Content</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 12 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 12">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Ankit Muraday</h4>
+                                <p class="dept-member-role">Media Captain</p>
+                                <p class="dept-member-desc">Digital Media Manager</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 13 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 13">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Devansh Goel</h4>
+                                <p class="dept-member-role">Promo Captain</p>
+                                <p class="dept-member-desc">Marketing & Promotion Strategy</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <!-- Member Card 14 -->
+                        <div class="dept-member-card">
+                            <div class="dept-member-image">
+                                <img src="#" alt="Member 14">
+                            </div>
+                            <div class="dept-member-details">
+                                <h4 class="dept-member-name">Archit Gupta</h4>
+                                <p class="dept-member-role">Promo Captain</p>
+                                <p class="dept-member-desc">Event Promotion Champion</p>
+                                <a href="#" class="dept-member-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="dept-slider-btn next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <!-- End Departmental Lead Section -->
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="footer-logo">
+                    <img src="Assets/Google-Emblem-removebg-preview.png" alt="GDG Logo">
+                </div>
+                <p class="footer-description">
+                    A community of developers passionate about Google technologies and building innovative solutions.
+                </p>
+            </div>
+            
+            <div class="footer-section links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="teams.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="back-to-top">Back to Top</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section contact">
+                <h3 class="footer-heading">Stay Updated</h3>
+                <p class="footer-address">
+                    19th KM Stone, NH-09, Ghaziabad - 201009,<br>
+                    Uttar Pradesh, India<br>
+                    +91 1207 135 112
+                </p>
+                <div class="media-links">
+                    <a href="https://www.linkedin.com/company/gdg-abesec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/gdgabesec" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/gdg.abesec/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GDG ABESEC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="teams.js"></script>
+</body>
+</html> 

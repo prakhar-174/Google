@@ -216,6 +216,7 @@
 
 @media screen and (max-width: 992px) {
     .contact-section {
+        margin-top: 50px;
         padding: 5rem 2.5rem;
     }
     
