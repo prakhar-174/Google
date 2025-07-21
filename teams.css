@@ -698,3 +698,11 @@
         gap: 0.5rem;
     }
 } 
+
+.gradient-overlay,
+.background,
+.team-card,
+.core-member-card,
+.dept-member-card {
+    will-change: transform, opacity;
+} 

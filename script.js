@@ -304,13 +304,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Show/hide back to top button based on scroll position
-    window.addEventListener('scroll', () => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function handleScroll() {
         if (window.scrollY > 500) {
             backToTopButton.style.opacity = '1';
             backToTopButton.style.visibility = 'visible';
         } else {
             backToTopButton.style.opacity = '0';
             backToTopButton.style.visibility = 'hidden';
+        }
+        ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(handleScroll);
+            ticking = true;
         }
     });
 }); 
