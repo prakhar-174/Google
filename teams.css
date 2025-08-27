@@ -1,7 +1,5 @@
-*{
-    scroll-behavior: smooth;
-}
-/* Team Section Enhanced Styles */
+/* Scroll behavior is now handled by Lenis */
+
 .team-section {
     position: relative;
     width: 100%;

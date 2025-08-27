@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="contact.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -80,32 +82,42 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
                         <label for="name">Your Name</label>
                         <div class="line"></div>
+                        <span class="error-message"></span>
                     </div>
                     
                     <div class="form-group">
                         <input type="email" id="email" name="email" required>
                         <label for="email">Your Email</label>
                         <div class="line"></div>
+                        <span class="error-message"></span>
                     </div>
                     
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" required minlength="5" maxlength="100">
                         <label for="subject">Subject</label>
                         <div class="line"></div>
+                        <span class="error-message"></span>
                     </div>
                     
                     <div class="form-group">
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required minlength="10" maxlength="1000"></textarea>
                         <label for="message">Your Message</label>
                         <div class="line"></div>
+                        <span class="error-message"></span>
+                        <span class="char-count">0/1000</span>
                     </div>
                     
-                    <button type="submit" class="submit-btn">
+                    <!-- Honeypot for spam protection -->
+                    <div class="honeypot" style="display: none;">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -155,6 +167,8 @@
         </div>
     </footer>
 
+    <script src="lenis-config.js"></script>
+    <script src="emailjs-config.js"></script>
     <script src="script.js"></script>
     <script src="contact.js"></script>
 </body>

@@ -107,10 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Scroll to show more button if showing less
+        // Scroll to show more button if showing less using Lenis
         if (!isExpanded) {
             setTimeout(() => {
-                showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (window.scrollToElement) {
+                    window.scrollToElement(showMoreBtn, { offset: -200 });
+                } else {
+                    showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }, 500);
         }
     });

@@ -292,16 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Back to Top functionality
-    const backToTopButton = document.querySelector('.back-to-top');
-    
-    backToTopButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+    // Back to Top functionality is now handled in lenis-config.js
 
     // Show/hide back to top button based on scroll position
     let lastScrollY = window.scrollY;

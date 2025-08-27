@@ -1,7 +1,5 @@
 /* Contact Section Styles */
-*{
-    scroll-behavior: smooth;
-}
+/* Scroll behavior is now handled by Lenis */
 .contact-section {
     position: relative;
     width: 100%;
@@ -197,6 +195,93 @@
 
 .submit-btn:hover i {
     transform: translateX(5px);
+}
+
+/* Enhanced Form Validation Styles */
+.error-message {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    color: #EA4335;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.form-group.error .error-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group.error .line {
+    background: #EA4335;
+}
+
+.form-group.error .line::after {
+    background: #EA4335;
+    transform: scaleX(1);
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    color: #EA4335;
+}
+
+.form-group.error label {
+    color: #EA4335 !important;
+}
+
+.char-count {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.char-count.warning {
+    color: #FBBC05;
+}
+
+.char-count.error {
+    color: #EA4335;
+}
+
+/* Success state */
+.form-group.success .line::after {
+    background: #34A853;
+    transform: scaleX(1);
+}
+
+.form-group.success input,
+.form-group.success textarea {
+    color: #34A853;
+}
+
+/* Disabled button state */
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-btn:disabled:hover {
+    background: #4285F4;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Honeypot (hidden spam protection) */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 /* Responsive Styles */
